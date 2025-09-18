@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Auto Play</title>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: white;
+        font-family: system-ui, -apple-system, "Segoe UI";
+        font-weight: 500;
+      }
+
+      .move-button {
+        height: 120px;
+        width: 120px;
+        border: 3px solid white;
+        background-color: transparent;
+        border-radius: 100px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      .move-icon {
+        width: 55px;
+      }
+
+      .resetScore-button,
+      .autoplay-button {
+        font-size: 15px;
+        padding: 8px 15px;
+        cursor: pointer;
+        border: none;
+      }
+
+      .result {
+        font-size: 25px;
+        font-weight: 600;
+      }
+
+      .score {
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div style="margin-bottom: 60px">
+      <button class="move-button js-rock-button">
+        <img class="move-icon" src="assets/rock-emoji.png" alt="rock-emoji" />
+      </button>
+
+      <button class="move-button js-paper-button">
+        <img class="move-icon" src="assets/paper-emoji.png" alt="paper-emoji" />
+      </button>
+
+      <button class="move-button js-scissors-button">
+        <img
+          class="move-icon"
+          src="assets/scissors-emoji.png"
+          alt="scissors-emoji"
+        />
+      </button>
+    </div>
+
+    <p class="js-result result"></p>
+    <p class="js-Choices"></p>
+    <p class="js-score score"></p>
+
+    <button
+      class="resetScore-button"
+      onclick="
+    resetScore();
+  "
+    >
+      Reset Score
+    </button>
+
+    <button class="autoplay-button jsAutoPlayButton" onclick="autoplay();">
+      Auto Play
+    </button>
+
+    <script src="scripts/rock-paper-scissors.js"></script>
+  </body>
+</html>
